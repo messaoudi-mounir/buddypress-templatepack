@@ -6,4 +6,5 @@
  * @subpackage Templatepack
  */
 ?>
-<!-- to come -->
+<div id="member-header">
+</div>

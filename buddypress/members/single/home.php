@@ -7,22 +7,17 @@
  */
 ?>
 <div id="buddypress">
-
 	<div id="member-sidebar">
-		<nav id="member-navigation" role="navigation">
+		<nav id="member-navigation" class="link-list" role="navigation">
 			<ul>
 				<!-- probably want to see about using new nav menu here -->
 				<?php bp_get_displayed_user_nav(); ?>
 			</ul>
 		</nav>
 		<?php bp_get_template_part( 'members/single/member-header' ) ?>
-
 	</div>
-
 	<div id="member-profile">
-
-		<?php do_action( 'bp_before_member_body' );
-
+		<?php 
 		if ( bp_is_user_activity() || !bp_current_component() ) :
 			bp_get_template_part( 'members/single/activity' );
 
@@ -52,11 +47,6 @@
 			bp_get_template_part( 'members/single/plugins'  );
 
 		endif;
-
-		do_action( 'bp_after_member_body' ); ?>
-
+ ?>
 	</div>
-
-	<?php do_action( 'bp_after_member_home_content' ); ?>
-
 </div>

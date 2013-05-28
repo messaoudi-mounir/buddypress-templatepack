@@ -21,14 +21,95 @@
 
 /* 01:  Globals
 -------------------------------------------------------------- */
+#buddypress .link-list, #buddypress .directory-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#buddypress .directory-list li{
+	margin: 0;
+	padding: 0;
+}
 /* 02:  Activity
 -------------------------------------------------------------- */
+#buddypress #buddypress-activity{
+
+}
+#buddypress #activity-stream{
+
+}
+#buddypress .activity-header{
+
+}
+#buddypress .activity-avatar{
+
+}
+#buddypress .activity-inreply{
+
+}
+#buddypress .activity-body{
+
+}
+#buddypress .activity-meta{
+
+}
+#buddypress ul.activity-actions{
+
+}
+#buddypress .activity-delete{
+
+}
+#buddypress .activity-comments{
+
+}
+#buddypress .activity-comments-lable{
+
+}
+#buddypress .activity-comment-avatars{
+
+}
 /* 03:  Members
 -------------------------------------------------------------- */
 /* 03a: Member profile
 -------------------------------------------------------------- */
+#buddypress #member-sidebar{
+
+}
+#buddypress #member-profile{
+
+}
+#buddypress nav#member-navigation{
+
+}
+#buddypress #member-header{
+	
+}
+#buddypress #member-activity{
+
+}
 /* 03b: Member directory
 -------------------------------------------------------------- */
+#buddypress #members-directory{
+
+}
+#buddypress #members-list{
+
+}
+#buddypress .member-avatar{
+
+}
+#buddypress .member-details{
+
+}
+#buddypress .member-title{
+
+}
+#buddypress .member-activity{
+
+}
+#buddypress .member-action{
+
+}
 /* 04:  Group
 -------------------------------------------------------------- */
 /* 04a: Group directory
@@ -47,9 +128,27 @@
 -------------------------------------------------------------- */
 /* 09:  Forms
 -------------------------------------------------------------- */
+#buddypress .button{
+
+}
+#buddypress .has-count{
+
+}
+#buddypress .confirm{
+
+}
 /* 09a: Buttons
 -------------------------------------------------------------- */
 /* 10:  Navigation
 -------------------------------------------------------------- */
 /* 10a: Pagination
 -------------------------------------------------------------- */
+#buddypress .buddypress-pagination{
+
+}
+#buddypress .buddypress-pagination-count{
+
+}
+#buddypress .buddypress-pagination-links{
+
+}

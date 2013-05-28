@@ -11,6 +11,6 @@
 //	bp_get_template_part( 'activity/post-form' );
 ?>
 
-<div id="member-activity" class="activity">
+<div id="member-activity">
 	<?php bp_get_template_part( 'activity/activity-loop' ) ?>
 </div>
