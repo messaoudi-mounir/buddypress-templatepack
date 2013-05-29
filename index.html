@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Buddypress-templatepack by karmatosed</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Buddypress-templatepack</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/karmatosed/buddypress-templatepack">View the Project on GitHub <small>karmatosed/buddypress-templatepack</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/karmatosed/buddypress-templatepack/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/karmatosed/buddypress-templatepack/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/karmatosed/buddypress-templatepack">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a name="welcome-to-buddypress-template-pack" class="anchor" href="#welcome-to-buddypress-template-pack"><span class="octicon octicon-link"></span></a>Welcome to BuddyPress template pack</h3>
+
+<p>The following is a guide to use when creating templates for the new BuddyPress template pack.</p>
+
+<h2>
+<a name="resources" class="anchor" href="#resources"><span class="octicon octicon-link"></span></a>Resources</h2>
+
+<p><a href="https://github.com/karmatosed/buddypress-templatepack">https://github.com/karmatosed/buddypress-templatepack</a>
+*You will be given commit access to this once you have 2 pull requests accepted. This is done to ensure project consistency but still allow people to get things done.</p>
+
+<p>In this repository is the skeleton for the plugin we’ll be using to create the template pack. &lt;to come by end of weekend). This will allow you to try the templates without requiring a theme.</p>
+
+<h2>
+<a name="github" class="anchor" href="#github"><span class="octicon octicon-link"></span></a>Github</h2>
+
+<p>You will either need to work with someone that knows how to do a pull request or ask for help with this before you can submit a template. We’re doing this to try and collect them in one place to start off.</p>
+
+<h2>
+<a name="task-process" class="anchor" href="#task-process"><span class="octicon octicon-link"></span></a>Task process</h2>
+
+<ol>
+<li>All tasks should be created as issues on Github or trac tickets</li>
+<li>Once you have been assigned a task you are agreeing to complete this. Only agree if you can see it through. If at any point you can’t or have an issue please let people know. Life happens, but we need to know.</li>
+<li>After you’ve given an estimate (see keeping everyone informed) you will then work on the task. At anytime if you need some help just ask - we’re all in this together.</li>
+<li>Once you’ve completed you can submit via a Github pull request.</li>
+</ol><h2>
+<a name="keeping-everyone-informed" class="anchor" href="#keeping-everyone-informed"><span class="octicon octicon-link"></span></a>Keeping everyone informed</h2>
+
+<ol>
+<li>You will be asked to estimate the time for the task once you take it on. This estimate is important so we can get a gauge of things.</li>
+<li>If the task is going to take longer than a week then every Tuesday by midnight you need to update the task situation on the trac ticket or Github issue.</li>
+</ol><h2>
+<a name="submission-of-template-process" class="anchor" href="#submission-of-template-process"><span class="octicon octicon-link"></span></a>Submission of template process</h2>
+
+<ol>
+<li>Work on assigned task (no task should be done without assignment of an issue on Github)</li>
+<li>Once done do a pull request for your changes.</li>
+<li>This will be either accepted or rejected with reasons so you can fix things.</li>
+</ol><h2>
+<a name="html-format" class="anchor" href="#html-format"><span class="octicon octicon-link"></span></a>HTML format</h2>
+
+<ol>
+<li>We will be using html5</li>
+<li>When working out what element to use this flowchart works: <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf</a>
+</li>
+</ol><h2>
+<a name="css-format" class="anchor" href="#css-format"><span class="octicon octicon-link"></span></a>CSS format</h2>
+
+<p><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">http://make.wordpress.org/core/handbook/coding-standards/css/</a></p>
+
+<h1>
+<a name="additional-rules" class="anchor" href="#additional-rules"><span class="octicon octicon-link"></span></a>Additional rules:</h1>
+
+<ol>
+<li>Ids should only be used for non styling - do not style on an id, use a class. 
+<a href="http://screwlewse.com/2010/07/dont-use-id-selectors-in-css/">http://screwlewse.com/2010/07/dont-use-id-selectors-in-css/</a>
+</li>
+<li>Be wary of  code smells : <a href="http://csswizardry.com/2012/11/code-smells-in-css/">http://csswizardry.com/2012/11/code-smells-in-css/</a>
+</li>
+</ol><h2>
+<a name="css-files" class="anchor" href="#css-files"><span class="octicon octicon-link"></span></a>CSS Files</h2>
+
+<ol>
+<li>shame.css : this should be used for any hacks, !importants etc. The aim of this file is to be first in cleanup. N.B. please comment any filters or hacks used to show why the need for them so it can be followed up, but try to avoid using this file where possible.</li>
+<li>buddypress.css : this is where custom CSS will be added as each component is done.</li>
+</ol><h2>
+<a name="naming-conventions" class="anchor" href="#naming-conventions"><span class="octicon octicon-link"></span></a>Naming conventions</h2>
+
+<ol>
+<li>Any BuddyPress will have an id “buddypress” around it (like we do currently).</li>
+<li>The file structure used in buddypress/ will be kept the same. Do not rename files.
+NOTE: this may get refactored later but we want to ensure we get templates done.</li>
+<li>Any id or class will be prefixed with bp- eg; bp-archive-members</li>
+</ol><h2>
+<a name="browsers-and-testing" class="anchor" href="#browsers-and-testing"><span class="octicon octicon-link"></span></a>Browsers and testing</h2>
+
+<p>Any template should be tested using the Twenty Thirteen theme so we’re all on the same page.
+The following browsers are also to be used for testing:</p>
+
+<ul>
+<li>Safari mobile (iPhone)*</li>
+<li>Safari desktop</li>
+<li>Android*</li>
+<li>Firefox (latest)</li>
+<li>Opera (latest)</li>
+<li>IE 8,9+</li>
+<li>Chrome (latest)</li>
+<li>iPad*</li>
+<li>Macbook Air</li>
+<li>27”+ monitor
+*if you do not have mobile devices please say when take template</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/karmatosed">karmatosed</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
