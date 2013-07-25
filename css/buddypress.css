@@ -39,7 +39,9 @@
 
 }
 #buddypress .activity-header{
-
+	float: left;
+	margin: 0 2% 2% 0;
+	width: 80px;
 }
 #buddypress .activity-avatar{
 
@@ -48,10 +50,14 @@
 
 }
 #buddypress .activity-body{
-
+	margin: 0 0 0 100px;
 }
 #buddypress .activity-meta{
 
+}
+#buddypress .activity-meta a{
+	float: left;
+	margin: 0 2% 0 0;
 }
 #buddypress ul.activity-actions{
 
@@ -94,6 +100,12 @@
 }
 #buddypress #members-list{
 
+}
+#buddypress #members-list li{
+	float: left;
+	margin: 0 2% 2% 0;
+	min-height: 150px;
+	width: 48%;
 }
 #buddypress .member-avatar{
 
@@ -152,4 +164,3 @@
 #buddypress .buddypress-pagination-links{
 
 }
-@import url('shame.css');

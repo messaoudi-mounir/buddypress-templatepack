@@ -1,3 +1,6 @@
 /* = Hacks, oopsies and omgs
 =======================================================
-
+*/
+#buddypress .directory-list li{
+	overflow: hidden;
+}

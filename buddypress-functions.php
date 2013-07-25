@@ -109,7 +109,7 @@ class BP_Templatepack extends BP_Theme_Compat {
 		// BuddyPress Theme Compatibility
 		} else {
 			$location = trailingslashit( $this->url );
-			$handle   = 'bp-turtleshell-css';
+			$handle   = 'bp-templatepack-css';
 		}
 
 		wp_enqueue_style( $handle, $location . $file, array(), $this->version, 'screen' );
@@ -137,7 +137,7 @@ class BP_Templatepack extends BP_Theme_Compat {
 		// BuddyPress Theme Compatibility
 		} else {
 			$location = trailingslashit( $this->url );
-			$handle   = 'bp-turtleshell-js';
+			$handle   = 'bp-templatepack-js';
 		}
 
 		wp_enqueue_script( $handle, $location . $file, array( 'jquery', 'hoverIntent', ), $this->version );
