@@ -40,5 +40,5 @@
 
 		endif;
  ?>
-	</div>
-</div>
+	</div><!-- end #member-profile -->
+</div><!-- end #buddypress -->

@@ -13,6 +13,6 @@
 			<?php bp_get_displayed_user_nav(); ?>
 			<?php bp_get_options_nav(); ?>
 		</ul>
-	</nav>
+	</nav><!-- end #member-navigation -->
 	<?php bp_get_template_part( 'members/single/member-header' ) ?>
 </div><!-- end #member-panel -->

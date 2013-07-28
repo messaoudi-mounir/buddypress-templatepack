@@ -7,4 +7,4 @@
  */
 ?>
 <div id="member-header">
-</div>
+</div><!-- end #member-header -->
