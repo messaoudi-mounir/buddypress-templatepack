@@ -98,14 +98,33 @@
 #buddypress #members-directory{
 
 }
-#buddypress #members-list{
-
+@media only screen and (min-width : 481px) {
+	#buddypress #members-list{
+		-moz-column-count: 2;
+	    -moz-column-gap: 10px;
+	    -webkit-column-count: 2;
+	    -webkit-column-gap: 10px;
+	    column-count: 2;
+	    column-gap: 10px;
+	    width: 100%; 
+	}
+}
+@media only screen and (max-width : 480px) {
+	#buddypress #members-list{
+		-moz-column-count: 1;
+	    -moz-column-gap: 10px;
+	    -webkit-column-count: 1;
+	    -webkit-column-gap: 10px;
+	    column-count: 1;
+	    column-gap: 10px;
+	    width: 100%; 
+	}
 }
 #buddypress #members-list li{
-	float: left;
-	margin: 0 2% 2% 0;
-	min-height: 150px;
-	width: 48%;
+	background:#eee;
+	display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
 }
 #buddypress .member-avatar{
 
