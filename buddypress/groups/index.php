@@ -20,5 +20,5 @@
 		<?php do_action( 'bp_after_directory_groups_content' ); ?>
 	</form>
 	<?php do_action( 'bp_after_directory_groups' ); ?>
-</div>
+</div><!-- end #buddypress -->
 <?php do_action( 'bp_after_directory_groups_page' ); ?>

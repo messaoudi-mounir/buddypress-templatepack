@@ -16,5 +16,5 @@
 	<?php else : ?>
 		<!-- do something here output -->
 	<?php endif; ?>
-</div>
+</div><!-- end #buddypress -->
 

@@ -29,7 +29,7 @@
 			</div>
 		</li>
 	<?php endwhile; ?>
-	</ul>
+	</ul><!-- end #members-list -->
 <?php else: ?>
 
 <?php endif; ?>

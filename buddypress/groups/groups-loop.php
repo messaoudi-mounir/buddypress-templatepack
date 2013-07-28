@@ -37,7 +37,7 @@
 			</div>
 		</li>
 	<?php endwhile; ?>
-	</ul>
+	</ul><!-- end #groups-list -->
 	<?php do_action( 'bp_after_directory_groups_list' ); ?>
 	<div class="buddypress-pagination">
 		<div class="buddypress-pagination-count">

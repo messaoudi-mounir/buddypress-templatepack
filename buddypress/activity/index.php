@@ -28,4 +28,4 @@
 			</div>
 		</div>	
 	<?php endif; ?>
-</div>
+</div><!-- end #buddypress -->
