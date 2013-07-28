@@ -53,7 +53,7 @@
 	margin: 0 0 0 100px;
 }
 #buddypress .activity-meta{
-
+	padding: 0 0 4% 0;
 }
 #buddypress .activity-meta a{
 	float: left;
@@ -156,11 +156,11 @@
 /* 10a: Pagination
 -------------------------------------------------------------- */
 #buddypress .buddypress-pagination{
-
+	padding: 0 0 2% 0;
 }
 #buddypress .buddypress-pagination-count{
-
+	float: left;
 }
 #buddypress .buddypress-pagination-links{
-
+	float: right;
 }

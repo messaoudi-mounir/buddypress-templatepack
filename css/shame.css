@@ -2,5 +2,17 @@
 =======================================================
 */
 #buddypress .directory-list li{
+	clear: both;
+}
+#buddypress .directory-list li li{
+	clear: none;
+}
+#buddypress .buddypress-pagination{
 	overflow: hidden;
+}
+#buddypress .activity-meta{
+	overflow: hidden;
+}
+#buddypress #members-list li{
+	clear: none;
 }

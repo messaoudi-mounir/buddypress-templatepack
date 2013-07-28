@@ -8,10 +8,10 @@
 ?>
 
 <?php if ( bp_has_activities( bp_ajax_querystring( 'activity' ) ) ) : ?>
-	<?php while ( bp_activities() ) : bp_the_activity(); ?>
-		<ul id="activity-stream" class="directory-list">
+	<ul id="activity-stream" class="directory-list">
+		<?php while ( bp_activities() ) : bp_the_activity(); ?>
 			<?php bp_get_template_part( 'activity/entry' ); ?>
-		</ul>
-	<?php endwhile; ?>
+		<?php endwhile; ?>
+	</ul>
 <?php else : ?>
 <?php endif; ?>

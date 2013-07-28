@@ -16,15 +16,6 @@
 		<?php if ( 'activity_comment' == bp_get_activity_type() ) : ?>
 			<a class="activity-inreply" href="<?php bp_activity_thread_permalink(); ?>"><?php printf( _x( ' in reply to %s:', 'Paul posted a new activity comment [in reply to John]:', 'buddypress' ), bp_members_get_user_nicename( bp_get_activity_parent_user_id() ) ); ?></a>
 		<?php endif; ?>
-		<?php if ( bp_activity_get_comment_count() ) : ?>
-			<div class="activity-comments">
-				<p class="activity-comments-label"><?php printf( _n( 'There is %s voice in this conversation &nbsp;', 'There are %s voices in this conversation &nbsp;', count( bp_activity_get_comments_user_ids() ), 'buddypress' ), number_format_i18n( count( bp_activity_get_comments_user_ids() ) ) ); ?></p>
-				<ul class="activity-coments-avatars">
-					<?php bp_activity_comments_user_avatars(); ?>
-				</ul>
-				<?php bp_activity_comments(); ?>
-			</div>
-		<?php endif; ?>
 	</div>
 	<div class="activity-body">
 		<?php if ( bp_activity_has_content() ) : ?>
@@ -56,6 +47,15 @@
 				</ul>
 			<?php endif; ?>
 		</div>
+		<?php if ( bp_activity_get_comment_count() ) : ?>
+			<div class="activity-comments">
+				<p class="activity-comments-label"><?php printf( _n( 'There is %s voice in this conversation &nbsp;', 'There are %s voices in this conversation &nbsp;', count( bp_activity_get_comments_user_ids() ), 'buddypress' ), number_format_i18n( count( bp_activity_get_comments_user_ids() ) ) ); ?></p>
+				<ul class="activity-coments-avatars">
+					<?php bp_activity_comments_user_avatars(); ?>
+				</ul>
+				<?php bp_activity_comments(); ?>
+			</div>
+		<?php endif; ?>
 	</div>
 </li>
 

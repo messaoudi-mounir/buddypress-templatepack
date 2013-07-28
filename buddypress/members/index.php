@@ -14,7 +14,7 @@
 			<?php bp_get_template_part( 'members/members-loop' ); ?>
 		</div>
 	<?php else : ?>
-
+		<!-- do something here output -->
 	<?php endif; ?>
 </div>
 
