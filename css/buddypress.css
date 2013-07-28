@@ -82,8 +82,13 @@
 #buddypress #member-sidebar{
 
 }
+#buddypress #member-panel{
+	float:left;
+	width:30%;
+}
 #buddypress #member-profile{
-
+	float:left;
+	width:70%;
 }
 #buddypress nav#member-navigation{
 
@@ -153,6 +158,26 @@
 -------------------------------------------------------------- */
 /* 06:  Messages
 -------------------------------------------------------------- */
+#buddypress .messages-wrap{
+	overflow:auto;
+}
+#buddypress .messages-list {
+	float:left;
+	width:28%;
+	margin-right:2%;
+}
+#buddypress .messages-list ul li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#buddypress .messages-list ul li a{
+	font-size:75%;
+}
+#buddypress .messages-content-wrap {
+	float:left;
+	width:70%;
+}
 /* 07:  Notifications and notices
 -------------------------------------------------------------- */
 /* 08:  Core widgets
