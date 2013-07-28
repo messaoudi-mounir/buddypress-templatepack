@@ -41,8 +41,8 @@
 }
 #buddypress .activity-header{
 	float: left;
-	margin: 0 2% 2% 0;
-	width: 80px;
+	margin: 0 0 2% 0;
+	width: 60px;
 }
 #buddypress .activity-avatar{
 
@@ -51,7 +51,7 @@
 
 }
 #buddypress .activity-body{
-	margin: 0 0 0 100px;
+	margin: 0 0 0 60px;
 }
 #buddypress .activity-meta{
 	padding: 0 0 4% 0;

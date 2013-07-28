@@ -12,7 +12,7 @@
 	<?php if ( bp_has_members() ) : ?>
 		<div id="members-directory">
 			<?php bp_get_template_part( 'members/members-loop' ); ?>
-		</div>
+		</div><!-- end #members-directory -->
 	<?php else : ?>
 		<!-- do something here output -->
 	<?php endif; ?>

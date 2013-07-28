@@ -14,7 +14,7 @@ switch ( bp_current_action() ) :
 
 		<div id="mygroups">
 			<?php bp_get_template_part( 'groups/groups-loop' ); ?>
-		</div>
+		</div><!-- end #mygroups -->
 
 		<?php do_action( 'bp_after_member_groups_content' );
 		break;
