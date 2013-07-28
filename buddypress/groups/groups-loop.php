@@ -35,7 +35,6 @@
 					<?php bp_group_type(); ?> / <?php bp_group_member_count(); ?>
 				</div>
 			</div>
-			<div class="clear"></div>
 		</li>
 	<?php endwhile; ?>
 	</ul>
