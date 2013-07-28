@@ -95,6 +95,8 @@ class BP_Templatepack extends BP_Theme_Compat {
 	public function enqueue_styles() {
 		// LTR or RTL
 		$file = is_rtl() ? 'css/buddypress-rtl.css' : 'css/buddypress.css';
+		$shamefile = 'css/shame.css';
+		$shamehandle = 'shame-css';
 
 		// Check child theme
 		if ( file_exists( trailingslashit( get_stylesheet_directory() ) . $file ) ) {
@@ -113,6 +115,8 @@ class BP_Templatepack extends BP_Theme_Compat {
 		}
 
 		wp_enqueue_style( $handle, $location . $file, array(), $this->version, 'screen' );
+		// add in shame.css
+		wp_enqueue_style( $shamehandle, $location . $shamefile, array(), $this->version, 'screen');
 	}
 
 	/**
