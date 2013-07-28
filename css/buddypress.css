@@ -1,3 +1,4 @@
+/* Credits : @karmatosed, @hnla, @Noel_Tock
 /* =TABLE OF CONTENTS
 =======================================================
 01:  Globals
@@ -121,7 +122,6 @@
 	}
 }
 #buddypress #members-list li{
-	background:#eee;
 	display: inline-block;
     margin-bottom: 10px;
     width: 100%;
