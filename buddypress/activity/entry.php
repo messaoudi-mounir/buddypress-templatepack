@@ -14,8 +14,8 @@
 				<?php bp_activity_avatar( 'type=thumb' ); ?>
 			</a>
 		</div>
-		<?php if ( bp_get_activity_type() == 'activity_comment' ) : ?>
-			<a class="activity-inreply" href="<?php bp_activity_thread_permalink(); ?>"><?php printf( _x( ' in reply to %s:', 'Paul posted a new activity comment [in reply to John]:', 'buddypress' ), bp_members_get_user_nicename( bp_get_activity_parent_user_id() ) ); ?></a>
+		<?php if ( bp_activity_can_comment() ) : ?>
+			<a href="<?php bp_activity_comment_link(); ?>" class="button has-count"><?php printf( __( '<span>%s</span>', 'buddypress' ), bp_activity_get_comment_count() ); ?></a>
 		<?php endif; ?>
 	</div>
 	<div class="activity-body">
@@ -27,13 +27,10 @@
 			</div>
 		<?php endif; ?>
 		<div class="activity-meta">
-			<div class="activity-timestamp">
-				<a href="<?php bp_activity_thread_permalink(); ?>"><?php echo bp_core_time_since( bp_get_activity_date_recorded() ); ?></a>
-			</div>
 			<?php if ( is_user_logged_in() ) : ?>
 				<ul class="activity-actions">
 					<?php if ( bp_activity_can_comment() ) : ?>
-						<li><a href="<?php bp_activity_comment_link(); ?>" class="button has-count"><?php printf( __( 'Reply <span>%s</span>', 'buddypress' ), bp_activity_get_comment_count() ); ?></a></li>
+						<li><a href="<?php bp_activity_comment_link(); ?>" class="button has-count"><?php printf( __( 'Reply', 'buddypress' )); ?></a></li>
 					<?php endif; ?>
 					<?php if ( bp_activity_can_favorite() ) : ?>
 						<li>

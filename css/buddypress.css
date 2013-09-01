@@ -147,14 +147,16 @@
 	margin: 0 0 0 60px;
 }
 #buddypress .activity-meta{
-	padding: 0 0 4% 0;
 }
 #buddypress .activity-meta a{
 	float: left;
 	margin: 0 2% 0 0;
 }
-#buddypress ul.activity-actions{
+#buddypress .activity-actions{
 
+}
+#buddypress .directory-list .activity-actions li{
+	margin: 0;
 }
 #buddypress .activity-delete{
 

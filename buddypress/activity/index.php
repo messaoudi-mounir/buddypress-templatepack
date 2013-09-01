@@ -118,7 +118,7 @@
 				</select>
 			</li>
 		</ul>
-	</mav>
+	</nav>
 	<?php do_action( 'bp_before_directory_activity_list' ); ?>
 	<div id="buddypress-activity">
 		<?php bp_get_template_part( 'activity/activity-loop' ); ?>

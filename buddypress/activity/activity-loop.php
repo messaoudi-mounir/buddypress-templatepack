@@ -45,7 +45,7 @@
 	<div id="message" class="message-info">
 		<p><?php _e( 'Sorry, there was no activity found. Please try a different filter.', 'buddypress' ); ?></p>
 	</div>
-
+<?php endif; ?>
 	<?php do_action( 'bp_after_activity_loop' ); ?>
 
 <form action="" name="activity-loop-form" id="form-activity-filter" method="post">
