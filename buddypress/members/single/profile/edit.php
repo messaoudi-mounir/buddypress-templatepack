@@ -11,13 +11,13 @@
 if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) ) :
 	while ( bp_profile_groups() ) : bp_the_profile_group(); ?>
 
-<form action="<?php bp_the_profile_group_edit_form_action(); ?>" method="post" id="profile-edit-form" class="buddypress-form <?php bp_the_profile_group_slug(); ?>">
+<form action="<?php bp_the_profile_group_edit_form_action(); ?>" method="post" id="profile-edit-form" class="form-buddypress <?php bp_the_profile_group_slug(); ?>">
 
 	<?php do_action( 'bp_before_profile_field_content' ); ?>
 
 		<h4><?php printf( __( "Editing '%s' Profile Group", "buddypress" ), bp_get_the_profile_group_name() ); ?></h4>
 
-		<ul class="buddypress-nav">
+		<ul class="nav-list">
 			<?php bp_profile_group_tabs(); ?>
 		</ul>
 

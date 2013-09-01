@@ -49,7 +49,7 @@ do_action( 'bp_before_group_header' );
 
 <div id="group-header-content">
 	<span class="highlight"><?php bp_group_type(); ?></span>
-	<span class="activity"><?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?></span>
+	<span class="activity-span"><?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?></span>
 
 	<?php do_action( 'bp_before_group_header_meta' ); ?>
 
@@ -57,16 +57,12 @@ do_action( 'bp_before_group_header' );
 
 		<?php bp_group_description(); ?>
 
-		<div id="group-buttons">
-
-			<?php do_action( 'bp_group_header_actions' ); ?>
-
-		</div><!-- #item-buttons -->
+		<?php do_action( 'bp_group_header_actions' ); ?>
 
 		<?php do_action( 'bp_group_header_meta' ); ?>
 
 	</div>
-</div><!-- #item-header-content -->
+</div>
 
 <?php
 do_action( 'bp_after_group_header' );

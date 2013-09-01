@@ -18,7 +18,7 @@ elseif ( bp_is_group_forum_topic() ) :
 
 else : ?>
 
-	<div id="forum-nav" class="nav-list no-ajax" role="navigation">
+	<nav id="forum-nav" class="nav-list no-ajax" role="navigation">
 		<ul>
 
 			<?php if ( is_user_logged_in() ) : ?>
@@ -54,7 +54,7 @@ else : ?>
 		</ul>
 	</nav>
 
-	<div class="forums single-forum">
+	<div class="single-forum">
 
 		<?php bp_get_template_part( 'forums/forums-loop' ) ?>
 

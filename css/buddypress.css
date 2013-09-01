@@ -3,33 +3,59 @@
 =======================================================
 01:  Globals
 02:  Activity
+02b: Activity > Post form
+02c: Activity > Entry
+02d: Activity > Comments
 03:  Members
-03a: Member profile
-03b: Member directory
+03b: Members > Profile
+03c: Members > Directory
+03d: Members > Register
 04:  Group
-04a: Group directory
-04b: Group profile
-05:  Blogs
-05a: Blog directory
-06:  Messages
-07:  Notifications and notices
-08:  Core widgets
-09:  Forms
-09a: Buttons
-10:  Navigation
-10a: Pagination
+04b: Group > Directory
+04c: Group > Profile
+04d: Group > Create
+05: Forum
+05b: Forum > Directory
+06:  Blogs
+06b: Blog > Directory
+07:  Messages
+08:  Notifications and notices
+09:  Core widgets (do we still need?)
+10:  Forms
+11: Buttons and clicks
+12: Actions
+13:  Navigation
+13b: Navigation > Pagination
+13c: Navigation > Loading
+14: Plugins
 */
 
 /* 01:  Globals
 -------------------------------------------------------------- */
-#buddypress .link-list, #buddypress .directory-list{
+#buddypress .link-list, #buddypress .directory-list, #buddypress .nav-list ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-#buddypress .directory-list li{
+#buddypress .directory-list li, #buddypress .nav-list li{
 	margin: 0;
 	padding: 0;
+}
+#buddypress .activity-span{
+
+}
+#buddypress .highlight{
+
+}
+#buddypress .search-directory{
+	
+}
+#buddypress img.wp-smiley {
+	border: none !important;
+	clear: none !important;
+	float: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 /* 02:  Activity
 -------------------------------------------------------------- */
@@ -39,6 +65,67 @@
 #buddypress #activity-stream{
 
 }
+#buddypress .nav-activity-filter{
+
+}
+#buddypress li#activity-all{
+
+}
+#buddypress li#activity-friends{
+
+}
+#buddypress li#activity-groups{
+
+}
+#buddypress li#activity-favorties{
+
+}
+#buddypress li#activity-mentions{
+
+}
+#buddypress #activity-filter{
+
+}
+#buddypress #activity-filter-by{
+
+}
+#buddypress #nav-activity-filter{
+
+}
+#buddypress .activity-span{
+
+}
+/* 02b:  Activity > Post form
+-------------------------------------------------------------- */
+#buddypress .update-avatar{
+
+}
+#buddypress .update-content{
+
+}
+#buddypress .update-textarea{
+
+}
+#buddypress .update-submit{
+
+}
+#buddypress .update-box{
+
+}
+#buddypress .update-in{
+
+}
+#buddypress .update-object{
+
+}
+#buddypress .update-hidden-object{
+
+}
+#buddypress .update-hidden-in{
+
+}
+/* 02c:  Activity > Entry
+-------------------------------------------------------------- */
 #buddypress .activity-header{
 	float: left;
 	margin: 0 0 2% 0;
@@ -69,15 +156,63 @@
 #buddypress .activity-comments{
 
 }
-#buddypress .activity-comments-lable{
+#buddypress .activity-comments-label{
 
 }
 #buddypress .activity-comment-avatars{
 
 }
+/* unsure about these .ac classes - no semantic name seems to come to mind - TL*/
+#buddypress .ac-reply-avatar{
+
+}
+#buddypress .ac-reply-content{
+
+}
+#buddypress .ac-input{
+
+}
+/* 02d:  Activity > Comments
+-------------------------------------------------------------- */
+#buddypress li.activity-comment{
+
+}
+#buddypress .comment-avatar{
+
+}
+#buddypress .comment-meta{
+
+}
+#buddypress .comment-content{
+
+}
+#buddypress .comment-options{
+
+}
+#buddypress .comment-reply{
+
+}
+#buddypress .comment-delete{
+
+}
 /* 03:  Members
 -------------------------------------------------------------- */
-/* 03a: Member profile
+#buddypress #member-navigaiton{
+
+}
+#buddypress #member-activate{
+
+}
+#buddypress #search-members{
+
+}
+#buddypress #form-members{
+
+}
+#buddypress #member-directory{
+
+}
+/* 03b: Member > Profile
 -------------------------------------------------------------- */
 #buddypress #member-sidebar{
 
@@ -99,7 +234,28 @@
 #buddypress #member-activity{
 
 }
-/* 03b: Member directory
+#buddypress #avatar-upload-form{
+
+}
+#buddypress #profile-edit-form{
+
+}
+#buddypress .profile-fields{
+
+}
+#buddypress #member-activity{
+
+}
+#buddypress #member-profile{
+
+}
+#buddypress #member-header{
+
+}
+#buddypress #member-panel{
+
+}
+/* 03c: Member > Directory
 -------------------------------------------------------------- */
 #buddypress #members-directory{
 
@@ -146,17 +302,196 @@
 #buddypress .member-action{
 
 }
+/* 03d: Member > Register
+-------------------------------------------------------------- */
+#buddypress #register{
+
+}
+#buddypress #profile-details{
+
+}
+#buddypress .editfield{
+
+}
+#buddypress .register-section{
+
+}
+#buddypress #blog-details{
+
+}
+#buddypress .datebox{
+
+}
+#buddypress .field-visibility-settings{
+	
+}
+#buddypress .field-visibility-settings-toggle{
+
+}
 /* 04:  Group
 -------------------------------------------------------------- */
-/* 04a: Group directory
+#buddypress #group-activity-nav{
+
+}
+#buddypress #group-activity{
+
+}
+/* 04b: Group > Directory
 -------------------------------------------------------------- */
-/* 04b: Group profile
+#buddypress #groups-list{
+
+}
+#buddypress .group-avatar{
+
+}
+#buddypress .group-content{
+
+}
+#buddypress .group-title{
+
+}
+#buddypress .group-meta{
+
+}
+#buddypress .group-descrtiption{
+
+}
+#buddypress .group-action{
+
+}
+#buddypress #search-groups{
+
+}
+#buddypress #groups-directory{
+
+}
+/* 04c: Group > Profile
 -------------------------------------------------------------- */
-/* 05:  Blogs
+#buddypress #admin-nav{
+
+}
+#buddypress #admins-list{
+
+}
+#buddypress #mods-list{
+
+}
+#buddypress #request-list{
+
+}
+#buddypress #group-header{
+
+}
+#buddypress #group-actions{
+
+}
+#buddypress #group-header-avatar{
+
+}
+#buddypress #group-header-content{
+
+}
+#buddypress #group-meta{
+
+}
+#buddypress #group-nav{
+
+}
+#buddypress #group-body{
+
+}
+/* 04d: Group > Create
 -------------------------------------------------------------- */
-/* 05a: Blog directory
+#buddypress #nav-create{
+
+}
+#buddypress #create-body{
+
+}
+#buddypress .secondary-column{
+
+}
+#buddypress .primary-column{
+
+}
+#buddypress #avatar-crop-pane{
+
+}
+/* 05:  Forum
 -------------------------------------------------------------- */
-/* 06:  Messages
+#buddypress .forum-table{
+
+}
+#buddypress #th-title{
+
+}
+#buddypress #th-postcount{
+
+}
+#buddypress #th-freshness{
+
+}
+#buddypress #td-title{
+
+}
+#buddypress .topic-meta{
+
+}
+#buddypress .topic-in{
+
+}
+#buddypress .td-postcount{
+
+}
+#buddypress .td-freshness{
+
+}
+#buddypress .forum-time-since{
+
+}
+#buddypress .topic-freshness-author{
+
+}
+/* 05b:  Forum > Directory
+-------------------------------------------------------------- */
+#buddypress #form-forums{
+
+}
+#buddypress #search-forum{
+
+}
+#buddypress .search-directory{
+
+}
+#buddypress #forum-form-directory{
+
+}
+#buddypress li#forums-all{
+
+}
+#buddypress li#forums-personal{
+
+}
+#buddypress li#forums-order-select{
+
+}
+#buddypress #forums-directory{
+
+}
+#buddypress #new-topic-post{
+
+}
+#buddypress #forum-nav{
+
+}
+#buddypress .single-forum{
+
+}
+/* 06:  Blogs
+-------------------------------------------------------------- */
+/* 06b: Blog > Directory
+-------------------------------------------------------------- */
+/* 07:  Messages
 -------------------------------------------------------------- */
 #buddypress .messages-wrap{
 	overflow:auto;
@@ -178,14 +513,59 @@
 	float:left;
 	width:70%;
 }
-/* 07:  Notifications and notices
+/* 08:  Notifications and notices
 -------------------------------------------------------------- */
-/* 08:  Core widgets
--------------------------------------------------------------- */
-/* 09:  Forms
--------------------------------------------------------------- */
-#buddypress .button{
+#buddypress #message{
 
+}
+#buddypress .message-info{
+
+}
+#buddypress .message-warning{
+
+}
+#buddypress .message-notice{
+
+}
+#buddypress .message-success{
+
+}
+#buddypress .message-update{
+
+}
+/* 09:  Core widgets
+-------------------------------------------------------------- */
+#buddypress .buddypress-widget{
+
+}
+/* is a widget and block the same so we can merge them? TL */
+#buddypress .buddypress-block{
+
+}
+/* 10:  Forms
+-------------------------------------------------------------- */
+#buddypress .form-buddypress textarea,
+#buddypress .form-buddypress input[type=text],
+#buddypress .form-buddypress input[type=text],
+#buddypress .form-buddypress input[type=color],
+#buddypress .form-buddypress input[type=date],
+#buddypress .form-buddypress input[type=datetime],
+#buddypress .form-buddypress input[type=datetime-local],
+#buddypress .form-buddypress input[type=email],
+#buddypress .form-buddypress input[type=month],
+#buddypress .form-buddypress input[type=number],
+#buddypress .form-buddypress input[type=range],
+#buddypress .form-buddypress input[type=search],
+#buddypress .form-buddypress input[type=tel],
+#buddypress .form-buddypress input[type=time],
+#buddypress .form-buddypress input[type=url],
+#buddypress .form-buddypress input[type=week],
+#buddypress .form-buddypress select,
+#buddypress .form-buddypress input[type=password],
+#buddypress .form-search input[type=search],
+#buddypress .form-search input[type=text] {
+	font: inherit;
+	padding: 5px;
 }
 #buddypress .has-count{
 
@@ -193,21 +573,175 @@
 #buddypress .confirm{
 
 }
-#buddypress .buddypress-form{
+#buddypress .form-buddypress{
 	
 }
-/* 09a: Buttons
+#buddypress .selected{
+
+}
+#buddypress .form-directory{
+
+}
+#buddypress .form-search{
+
+}
+
+/* 11: Buttons and clicks
 -------------------------------------------------------------- */
-/* 10:  Navigation
+#buddypress button,
+#buddypress a.button,
+#buddypress input[type=submit],
+#buddypress input[type=button],
+#buddypress input[type=reset],
+#buddypress ul.button-nav li a,
+#buddypress div.generic-button a,
+#buddypress .comment-reply-link,
+a.bp-title-button {
+	cursor: pointer;
+	outline: none;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+#buddypress button:hover,
+#buddypress a.button:hover,
+#buddypress a.button:focus,
+#buddypress input[type=submit]:hover,
+#buddypress input[type=button]:hover,
+#buddypress input[type=reset]:hover,
+#buddypress ul.button-nav li a:hover,
+#buddypress ul.button-nav li.current a,
+#buddypress div.generic-button a:hover,
+#buddypress .comment-reply-link:hover {
+	outline: none;
+	text-decoration: none;
+}
+#buddypress .button{
+
+}
+/* 12: Actions
 -------------------------------------------------------------- */
-/* 10a: Pagination
+/*not sure like bp- anything but this is deeply tied in code I think - TL */
+#buddypress #bp-primary-action{
+
+}
+#buddypress #bp-secondary-action{
+
+}
+#buddypress .delete{
+
+}
+#buddypress .confirm{
+
+}
+#buddypress .admin-demote-to-member{
+
+}
+/* 13:  Navigation
 -------------------------------------------------------------- */
-#buddypress .buddypress-pagination{
+#buddypress nav.nav-list{
+
+}
+#buddypress #nav-secondary{
+
+}
+#buddypress li.feed{
+
+}
+#buddypress li.last{
+
+}
+/* should we merge all filters into one navigaiton elements? - TL*/
+#buddypress #nav-filter{
+
+}
+/* 13b: Navigation > Pagination
+-------------------------------------------------------------- */
+#buddypress .pagination{
 	padding: 0 0 2% 0;
 }
-#buddypress .buddypress-pagination-count{
+#buddypress .pagination-count{
 	float: left;
 }
-#buddypress .buddypress-pagination-links{
+#buddypress .pagination-links{
 	float: right;
+}
+#buddypress #pagination-bottom{
+
+}
+#buddypress #pagination-top{
+
+}
+#buddypress .pagination-member{
+
+}
+#buddypress #previous-steps{
+
+}
+/* 13c: Navigation > Loading
+-------------------------------------------------------------- */
+#buddypress .load-more{
+
+}
+#buddypress a.loading,
+#buddypress input.loading {
+	-webkit-animation: loader-pulsate .5s infinite ease-in-out alternate;
+	-moz-animation: loader-pulsate .5s infinite ease-in-out alternate;
+	border-color: #aaa;
+}
+@-webkit-keyframes loader-pulsate {
+	from {
+		border-color: #aaa;
+		-webkit-box-shadow: 0 0 6px #ccc;
+		box-shadow: 0 0 6px #ccc;
+	}
+	to {
+		border-color: #ccc;
+		-webkit-box-shadow: 0 0 6px #f8f8f8;
+		box-shadow: 0 0 6px #f8f8f8;
+	}
+}
+@-moz-keyframes loader-pulsate {
+	from {
+		border-color: #aaa;
+		-moz-box-shadow: 0 0 6px #ccc;
+		box-shadow: 0 0 6px #ccc;
+	}
+	to {
+		border-color: #ccc;
+		-moz-box-shadow: 0 0 6px #f8f8f8;
+		box-shadow: 0 0 6px #f8f8f8;
+	}
+}
+
+#buddypress a.loading:hover,
+#buddypress input.loading:hover {
+}
+#buddypress input[type="submit"].pending,
+#buddypress input[type="button"].pending,
+#buddypress input[type="reset"].pending,
+#buddypress input[type="submit"].disabled,
+#buddypress input[type="button"].disabled,
+#buddypress input[type="reset"].disabled,
+#buddypress button.pending,
+#buddypress button.disabled,
+#buddypress div.pending a,
+#buddypress a.disabled {
+}
+#buddypress input[type="submit"]:hover.pending,
+#buddypress input[type="button"]:hover.pending,
+#buddypress input[type="reset"]:hover.pending,
+#buddypress input[type="submit"]:hover.disabled,
+#buddypress input[type="button"]:hover.disabled,
+#buddypress input[type="reset"]:hover.disabled,
+#buddypress button.pending:hover,
+#buddypress button.disabled:hover,
+#buddypress div.pending a:hover,
+#buddypress a.disabled:hover {
+}
+
+/* 14: Plugins
+-------------------------------------------------------------- */
+#buddypress #plugins-content{
+
 }

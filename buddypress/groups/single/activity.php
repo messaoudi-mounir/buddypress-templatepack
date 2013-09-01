@@ -6,13 +6,13 @@
  * @subpackage Templatepack
  */
 ?>
-<div id="activity-nav" class="nav-list no-ajax" role="navigation">
+<nav id="group-activity-nav" class="nav-list no-ajax" role="navigation">
 	<ul>
 		<li class="feed"><a href="<?php bp_group_activity_feed_link(); ?>" title="<?php _e( 'RSS Feed', 'buddypress' ); ?>"><?php _e( 'RSS', 'buddypress' ); ?></a></li>
 
 		<?php do_action( 'bp_group_activity_syndication_options' ); ?>
 
-		<li id="activity-filter-select" class="last">
+		<li id="activity-filter" class="last">
 			<label for="activity-filter-by"><?php _e( 'Show:', 'buddypress' ); ?></label> 
 			<select id="activity-filter-by">
 				<option value="-1"><?php _e( 'Everything', 'buddypress' ); ?></option>
@@ -29,7 +29,7 @@
 			</select>
 		</li>
 	</ul>
-</div><!-- .item-list-tabs -->
+</nav>
 
 <?php do_action( 'bp_before_group_activity_post_form' ); ?>
 
@@ -42,7 +42,7 @@
 <?php do_action( 'bp_after_group_activity_post_form' ); ?>
 <?php do_action( 'bp_before_group_activity_content' ); ?>
 
-<div class="activity single-group" role="main">
+<div id="group-activity">
 
 	<?php bp_get_template_part( 'activity/activity-loop' ); ?>
 

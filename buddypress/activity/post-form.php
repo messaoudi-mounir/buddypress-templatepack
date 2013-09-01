@@ -16,7 +16,7 @@
 		</a>
 	</div>
 	
-	<p class="update-message"><?php if ( bp_is_group() )
+	<p class="message-update"><?php if ( bp_is_group() )
 		printf( __( "What's new in %s, %s?", 'buddypress' ), bp_get_group_name(), bp_get_user_firstname() );
 	else
 		printf( __( "What's new, %s?", 'buddypress' ), bp_get_user_firstname() );
@@ -28,7 +28,7 @@
 		</div>
 
 		<div id="update-options">
-			<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php _e( 'Post Update', 'buddypress' ); ?>" />
+			<input type="submit" name="update-submit" id="update-submit" value="<?php _e( 'Post Update', 'buddypress' ); ?>" />
 			
 			<?php if ( bp_is_active( 'groups' ) && !bp_is_my_profile() && !bp_is_group() ) : ?>
 
@@ -53,8 +53,8 @@
 
 			<?php elseif ( bp_is_group_home() ) : ?>
 
-				<input type="hidden" id="update-object" name="update-object" value="groups" />
-				<input type="hidden" id="update-in" name="update-in" value="<?php bp_group_id(); ?>" />
+				<input type="hidden" id="update-hidden-object" name="update-object" value="groups" />
+				<input type="hidden" id="update-hidden-in" name="update-in" value="<?php bp_group_id(); ?>" />
 
 			<?php endif; ?>
 

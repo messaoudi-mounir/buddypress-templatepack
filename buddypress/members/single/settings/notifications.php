@@ -8,7 +8,7 @@
 ?>
 <?php do_action( 'bp_before_member_settings_template' ); ?>
 
-<form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/notifications'; ?>" method="post" class="buddypress-form" id="settings-form">
+<form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/notifications'; ?>" method="post" class="form-buddypress" id="settings-form">
 	<p><?php _e( 'Send a notification by email when:', 'buddypress' ); ?></p>
 
 	<?php do_action( 'bp_notification_settings' ); ?>

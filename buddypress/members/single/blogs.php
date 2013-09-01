@@ -6,7 +6,7 @@
  * @subpackage Templatepack
  */
 ?>
-<nav class="list-nav" id="subnav" role="navigation">
+<nav class="nav-list" id="nav-secondary" role="navigation">
 	<ul>
 
 		<?php bp_get_options_nav(); ?>

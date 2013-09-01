@@ -8,7 +8,7 @@
 ?>
 <?php do_action( 'bp_before_member_settings_template' ); ?>
 
-<div class="info-message">
+<div id="message" class="info-message">
 
 	<?php if ( bp_is_my_profile() ) : ?>
 
@@ -22,7 +22,7 @@
 
 </div>
 
-<form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/delete-account'; ?>" name="account-delete-form" id="account-delete-form" class="buddypress-form" method="post">
+<form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/delete-account'; ?>" name="account-delete-form" id="account-delete-form" class="form-buddypress" method="post">
 
 	<?php do_action( 'bp_members_delete_account_before_submit' ); ?>
 

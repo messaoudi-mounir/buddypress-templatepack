@@ -63,7 +63,7 @@
 
 	<h4><?php _e( 'Privacy Options', 'buddypress' ); ?></h4>
 
-	<div class="radio">
+	<div class="bloack-radio">
 		<label>
 			<input type="radio" name="group-status" value="public"<?php bp_group_show_status_setting( 'public' ); ?> />
 			<strong><?php _e( 'This is a public group', 'buddypress' ); ?></strong>
@@ -101,7 +101,7 @@
 
 	<p><?php _e( 'Which members of this group are allowed to invite others?', 'buddypress' ); ?></p>
 
-	<div class="radio">
+	<div class="block-radio">
 		<label>
 			<input type="radio" name="group-invite-status" value="members"<?php bp_group_show_invite_status_setting( 'members' ); ?> />
 			<strong><?php _e( 'All group members', 'buddypress' ); ?></strong>
@@ -181,12 +181,12 @@
 
 	<?php do_action( 'bp_before_group_manage_members_admin' ); ?>
 
-	<div class="bp-widget">
+	<div class="buddypress-widget">
 		<h4><?php _e( 'Administrators', 'buddypress' ); ?></h4>
 
 		<?php if ( bp_has_members( '&include='. bp_group_admin_ids() ) ) : ?>
 
-		<ul id="admins-list" class="item-list single-line">
+		<ul id="admins-list" class="direcotry-list">
 
 			<?php while ( bp_members() ) : bp_the_member(); ?>
 			<li>
@@ -194,9 +194,7 @@
 				<h5>
 					<a href="<?php bp_member_permalink(); ?>"> <?php bp_member_name(); ?></a>
 					<?php if ( count( bp_group_admin_ids( false, 'array' ) ) > 1 ) : ?>
-					<span class="small">
-						<a class="button confirm admin-demote-to-member" href="<?php bp_group_member_demote_link( bp_get_member_user_id() ); ?>"><?php _e( 'Demote to Member', 'buddypress' ); ?></a>
-					</span>
+					<a class="button confirm admin-demote-to-member" href="<?php bp_group_member_demote_link( bp_get_member_user_id() ); ?>"><?php _e( 'Demote to Member', 'buddypress' ); ?></a>
 					<?php endif; ?>
 				</h5>
 			</li>
@@ -209,21 +207,21 @@
 	</div>
 
 	<?php if ( bp_group_has_moderators() ) : ?>
-		<div class="bp-widget">
+		<div class="buddypress-widget">
 			<h4><?php _e( 'Moderators', 'buddypress' ); ?></h4>
 
 			<?php if ( bp_has_members( '&include=' . bp_group_mod_ids() ) ) : ?>
-				<ul id="mods-list" class="item-list single-line">
+				<ul id="mods-list" class="directory-list">
 
 					<?php while ( bp_members() ) : bp_the_member(); ?>
 					<li>
 						<?php echo bp_core_fetch_avatar( array( 'item_id' => bp_get_member_user_id(), 'type' => 'thumb', 'width' => 30, 'height' => 30, 'alt' => sprintf( __( 'Profile picture of %s', 'buddypress' ), bp_get_member_name() ) ) ); ?>
 						<h5>
 							<a href="<?php bp_member_permalink(); ?>"> <?php bp_member_name(); ?></a>
-							<span class="small">
-								<a href="<?php bp_group_member_promote_admin_link( array( 'user_id' => bp_get_member_user_id() ) ); ?>" class="button confirm mod-promote-to-admin" title="<?php _e( 'Promote to Admin', 'buddypress' ); ?>"><?php _e( 'Promote to Admin', 'buddypress' ); ?></a>
-								<a class="button confirm mod-demote-to-member" href="<?php bp_group_member_demote_link( bp_get_member_user_id() ); ?>"><?php _e( 'Demote to Member', 'buddypress' ); ?></a>
-							</span>
+							
+							<a href="<?php bp_group_member_promote_admin_link( array( 'user_id' => bp_get_member_user_id() ) ); ?>" class="button confirm mod-promote-to-admin" title="<?php _e( 'Promote to Admin', 'buddypress' ); ?>"><?php _e( 'Promote to Admin', 'buddypress' ); ?></a>
+							<a class="button confirm mod-demote-to-member" href="<?php bp_group_member_demote_link( bp_get_member_user_id() ); ?>"><?php _e( 'Demote to Member', 'buddypress' ); ?></a>
+		
 						</h5>
 					</li>
 					<?php endwhile; ?>
@@ -235,7 +233,7 @@
 	<?php endif ?>
 
 
-	<div class="bp-widget">
+	<div class="buddypress-widget">
 		<h4><?php _e("Members", "buddypress"); ?></h4>
 
 		<?php if ( bp_group_has_members( 'per_page=15&exclude_banned=false' ) ) : ?>
@@ -244,11 +242,11 @@
 
 				<div class="pagination no-ajax">
 
-					<div id="member-count" class="pag-count">
+					<div class="pagination-count">
 						<?php bp_group_member_pagination_count(); ?>
 					</div>
 
-					<div id="member-admin-pagination" class="pagination-links">
+					<div class="pagination-links">
 						<?php bp_group_member_admin_pagination(); ?>
 					</div>
 
@@ -256,7 +254,7 @@
 
 			<?php endif; ?>
 
-			<ul id="members-list" class="item-list single-line">
+			<ul id="members-list" class="directory-list">
 				<?php while ( bp_group_members() ) : bp_group_the_member(); ?>
 
 					<li class="<?php bp_group_member_css_class(); ?>">
@@ -266,8 +264,6 @@
 							<?php bp_group_member_link(); ?>
 
 							<?php if ( bp_get_group_member_is_banned() ) _e( '(banned)', 'buddypress' ); ?>
-
-							<span class="small">
 
 							<?php if ( bp_get_group_member_is_banned() ) : ?>
 
@@ -285,7 +281,6 @@
 
 								<?php do_action( 'bp_group_manage_members_admin_item' ); ?>
 
-							</span>
 						</h5>
 					</li>
 
@@ -294,7 +289,7 @@
 
 		<?php else: ?>
 
-			<div id="message" class="info">
+			<div id="message" class="message-info">
 				<p><?php _e( 'This group has no members.', 'buddypress' ); ?></p>
 			</div>
 
@@ -313,13 +308,13 @@
 
 	<?php if ( bp_group_has_membership_requests() ) : ?>
 
-		<ul id="request-list" class="item-list">
+		<ul id="request-list" class="directory-list">
 			<?php while ( bp_group_membership_requests() ) : bp_group_the_membership_request(); ?>
 
 				<li>
 					<?php bp_group_request_user_avatar_thumb(); ?>
 					<h4><?php bp_group_request_user_link(); ?> <span class="comments"><?php bp_group_request_comment(); ?></span></h4>
-					<span class="activity"><?php bp_group_request_time_since_requested(); ?></span>
+					<span class="activity-span"><?php bp_group_request_time_since_requested(); ?></span>
 
 					<?php do_action( 'bp_group_membership_requests_admin_item' ); ?>
 
@@ -339,7 +334,7 @@
 
 	<?php else: ?>
 
-		<div id="message" class="info">
+		<div id="message" class="message-info">
 			<p><?php _e( 'There are no pending membership requests.', 'buddypress' ); ?></p>
 		</div>
 
@@ -356,7 +351,7 @@
 
 	<?php do_action( 'bp_before_group_delete_admin' ); ?>
 
-	<div id="message" class="info">
+	<div id="message" class="message-info">
 		<p><?php _e( 'WARNING: Deleting this group will completely remove ALL content associated with it. There is no way back, please be careful with this option.', 'buddypress' ); ?></p>
 	</div>
 
@@ -364,9 +359,7 @@
 
 	<?php do_action( 'bp_after_group_delete_admin' ); ?>
 
-	<div class="submit">
-		<input type="submit" disabled="disabled" value="<?php _e( 'Delete Group', 'buddypress' ); ?>" id="delete-group-button" name="delete-group-button" />
-	</div>
+	<input type="submit" disabled="disabled" value="<?php _e( 'Delete Group', 'buddypress' ); ?>" id="delete-group-button" name="delete-group-button" />
 
 	<?php wp_nonce_field( 'groups_delete_group' ); ?>
 

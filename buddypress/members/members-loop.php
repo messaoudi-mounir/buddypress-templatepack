@@ -6,7 +6,26 @@
  * @subpackage Templatepack
  */
 ?>
+<?php do_action( 'bp_before_members_loop' ); ?>
 <?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
+	<div id="buddypress-pagination-top" class="buddypress-pagination">
+
+		<div class="buddypress-pagination-count">
+
+			<?php bp_members_pagination_count(); ?>
+
+		</div>
+
+		<div class="buddypress-pagination-member buddypress-pagination-links">
+
+			<?php bp_members_pagination_links(); ?>
+
+		</div>
+
+	</div>
+
+	<?php do_action( 'bp_before_directory_members_list' ); ?>
+
 	<ul id="members-list" class="directory-list">
 	<?php while ( bp_members() ) : bp_the_member(); ?>
 		<li>
@@ -30,6 +49,27 @@
 		</li>
 	<?php endwhile; ?>
 	</ul><!-- end #members-list -->
-<?php else: ?>
+	<?php do_action( 'bp_after_directory_members_list' ); ?>
 
+	<?php bp_member_hidden_fields(); ?>
+
+	<div id="buddypress-pagination-bottom" class="buddypress-pagination">
+
+		<div class="buddypress-pagination-count">
+
+			<?php bp_members_pagination_count(); ?>
+
+		</div>
+
+		<div class="buddypress-pagination-member buddypress-pagination-links">
+
+			<?php bp_members_pagination_links(); ?>
+
+		</div>
+
+	</div>
+<?php else: ?>
+	<div id="message" class="message-info">
+		<p><?php _e( "Sorry, no members were found.", 'buddypress' ); ?></p>
+	</div>
 <?php endif; ?>

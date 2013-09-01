@@ -15,7 +15,7 @@
 		<?php bp_get_template_part( 'groups/single/group-header' ); ?>
 
 
-		<nav id="group-nav" class="list-nav no-ajax" role="navigation">
+		<nav id="group-nav" class="nav-list no-ajax" role="navigation">
 			<ul>
 
 				<?php bp_get_options_nav(); ?>
@@ -25,7 +25,7 @@
 			</ul>
 		</nav>
 
-	<div id="item-body">
+	<div id="group-body">
 
 		<?php do_action( 'bp_before_group_body' );
 

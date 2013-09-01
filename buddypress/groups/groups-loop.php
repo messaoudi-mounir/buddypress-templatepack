@@ -8,11 +8,11 @@
 ?>
 <?php do_action( 'bp_before_groups_loop' ); ?>
 <?php if ( bp_has_groups( bp_ajax_querystring( 'groups' ) ) ) : ?>
-	<div class="buddypress-pagination">
-		<div class="buddypress-pagination-count">
+	<div class="pagination">
+		<div class="pagination-count">
 			<?php bp_groups_pagination_count(); ?>
 		</div>
-		<div class="buddypress-pagination-links">
+		<div class="pagination-links">
 			<?php bp_groups_pagination_links(); ?>
 		</div>
 	</div>
@@ -25,8 +25,8 @@
 			</div>
 			<div class="group-content">
 				<div class="group-title"><a href="<?php bp_group_permalink(); ?>"><?php bp_group_name(); ?></a></div>
-				<div class="group-meta"><span class="activity"><?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?></span></div>
-				<div class="group-desc"><?php bp_group_description_excerpt(); ?></div>
+				<div class="group-meta"><span class="group-activity"><?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?></span></div>
+				<div class="group-description"><?php bp_group_description_excerpt(); ?></div>
 				<?php do_action( 'bp_directory_groups_item' ); ?>
 			</div>
 			<div class="group-action">
@@ -39,11 +39,11 @@
 	<?php endwhile; ?>
 	</ul><!-- end #groups-list -->
 	<?php do_action( 'bp_after_directory_groups_list' ); ?>
-	<div class="buddypress-pagination">
-		<div class="buddypress-pagination-count">
+	<div class="pagination">
+		<div class="pagination-count">
 			<?php bp_groups_pagination_count(); ?>
 		</div>
-		<div class="buddypress-pagination-links">
+		<div class="pagination-links">
 			<?php bp_groups_pagination_links(); ?>
 		</div>
 	</div>

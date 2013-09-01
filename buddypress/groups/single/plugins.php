@@ -16,6 +16,6 @@
 
 	<?php do_action( 'bp_after_group_body' ); ?>
 
-</div><!-- #item-body -->
+</div>
 
 <?php do_action( 'bp_after_group_plugin_template' );

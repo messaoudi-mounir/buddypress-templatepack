@@ -7,7 +7,7 @@
  */
 ?>
 
-<nav class="list-nav no-ajax" id="subnav" role="navigation">
+<nav class="nav-list no-ajax" id="nav-secondary" role="navigation">
 	<ul>
 		<?php if ( bp_core_can_edit_settings() ) : ?>
 

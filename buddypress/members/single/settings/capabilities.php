@@ -8,7 +8,7 @@
 ?>
 <?php do_action( 'bp_before_member_settings_template' ); ?>
 
-<form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/capabilities/'; ?>" name="account-capabilities-form" id="account-capabilities-form" class="buddypress-form" method="post">
+<form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/capabilities/'; ?>" name="account-capabilities-form" id="account-capabilities-form" class="form-buddypress" method="post">
 
 	<?php do_action( 'bp_members_capabilities_account_before_submit' ); ?>
 

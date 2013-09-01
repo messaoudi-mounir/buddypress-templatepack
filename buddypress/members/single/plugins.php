@@ -11,7 +11,7 @@
 
 		<?php if ( ! bp_is_current_component_core() ) : ?>
 
-		<nav class="list-nav no-ajax" id="subnav">
+		<nav class="nav-list no-ajax" id="nav-secondary">
 			<ul>
 				<?php bp_get_options_nav(); ?>
 

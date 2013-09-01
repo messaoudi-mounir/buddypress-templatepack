@@ -10,9 +10,9 @@
 
 	<?php do_action( 'bp_before_register_page' ); ?>
 
-	<div id="buddypress-register">
+	<div id="register">
 
-		<form action="" name="signup_form" id="signup_form" class="buddypress-form" method="post" enctype="multipart/form-data">
+		<form action="" name="signup_form" id="signup_form" class="form-buddypress" method="post" enctype="multipart/form-data">
 
 		<?php if ( 'registration-disabled' == bp_get_current_signup_step() ) : ?>
 			<?php do_action( 'template_notices' ); ?>
@@ -63,7 +63,7 @@
 
 				<?php do_action( 'bp_before_signup_profile_fields' ); ?>
 
-				<div class="buddypress-register" id="profile-details-section">
+				<div class="register-section" id="profile-details">
 
 					<h4><?php _e( 'Profile Details', 'buddypress' ); ?></h4>
 
@@ -204,7 +204,7 @@
 
 				<?php /***** Blog Creation Details ******/ ?>
 
-				<div class="register-section" id="blog-details-section">
+				<div class="register-section" id="blog-details">
 
 					<h4><?php _e( 'Blog Details', 'buddypress' ); ?></h4>
 
@@ -241,10 +241,8 @@
 
 			<?php do_action( 'bp_before_registration_submit_buttons' ); ?>
 
-			<div class="submit">
-				<input type="submit" name="signup_submit" id="signup_submit" value="<?php _e( 'Complete Sign Up', 'buddypress' ); ?>" />
-			</div>
-
+			<input type="submit" name="signup_submit" id="signup_submit" value="<?php _e( 'Complete Sign Up', 'buddypress' ); ?>" />
+			
 			<?php do_action( 'bp_after_registration_submit_buttons' ); ?>
 
 			<?php wp_nonce_field( 'bp_new_signup' ); ?>

@@ -7,7 +7,7 @@
  */
 ?>
 
-<nav class="list-nav no-ajax" id="subnav" role="navigation">
+<nav class="nav-list no-ajax" id="nav-secondary" role="navigation">
 	<ul>
 		<?php bp_get_options_nav(); ?>
 	</ul>
@@ -15,7 +15,7 @@
 
 <?php do_action( 'bp_before_profile_content' ); ?>
 
-<div id="profile">
+<div id="member-profile">
 
 <?php switch ( bp_current_action() ) :
 

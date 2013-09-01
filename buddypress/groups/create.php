@@ -16,7 +16,7 @@
 
 		<?php do_action( 'bp_before_create_group' ); ?>
 
-		<nav id="group-create-tabs" class="list-nav no-ajax" role="navigation">
+		<nav id="nav-create" class="nav-list no-ajax" role="navigation">
 			<ul>
 
 				<?php bp_group_creation_tabs(); ?>
@@ -26,7 +26,7 @@
 
 		<?php do_action( 'template_notices' ); ?>
 
-		<div id="group-create-body">
+		<div id="create-body">
 
 			<?php /* Group creation step 1: Basic group details */ ?>
 			<?php if ( bp_is_group_creation_step( 'group-details' ) ) : ?>
@@ -58,7 +58,7 @@
 
 				<h4><?php _e( 'Privacy Options', 'buddypress' ); ?></h4>
 
-				<div class="radio">
+				<div class="block-radio">
 					<label><input type="radio" name="group-status" value="public"<?php if ( 'public' == bp_get_new_group_status() || !bp_get_new_group_status() ) { ?> checked="checked"<?php } ?> />
 						<strong><?php _e( 'This is a public group', 'buddypress' ); ?></strong>
 						<ul>
@@ -91,7 +91,7 @@
 
 				<p><?php _e( 'Which members of this group are allowed to invite others?', 'buddypress' ); ?></p>
 
-				<div class="radio">
+				<div class="block-radio">
 					<label>
 						<input type="radio" name="group-invite-status" value="members"<?php bp_group_show_invite_status_setting( 'members' ); ?> />
 						<strong><?php _e( 'All group members', 'buddypress' ); ?></strong>
@@ -140,13 +140,13 @@
 
 				<?php if ( 'upload-image' == bp_get_avatar_admin_step() ) : ?>
 
-					<div class="left-menu">
+					<div class="secondary-column">
 
 						<?php bp_new_group_avatar(); ?>
 
 					</div><!-- .left-menu -->
 
-					<div class="main-column">
+					<div class="primary-column">
 						<p><?php _e( "Upload an image to use as an avatar for this group. The image will be shown on the main group page, and in search results.", 'buddypress' ); ?></p>
 
 						<p>
@@ -194,7 +194,7 @@
 
 				<?php if ( bp_is_active( 'friends' ) && bp_get_total_friend_count( bp_loggedin_user_id() ) ) : ?>
 
-					<div class="left-menu">
+					<div class="secondary-column">
 
 						<div id="invite-list">
 							<ul>
@@ -206,14 +206,14 @@
 
 					</div><!-- .left-menu -->
 
-					<div class="main-column">
+					<div class="primary-column">
 
-						<div id="message" class="info">
+						<div id="message" class="message-info">
 							<p><?php _e('Select people to invite from your friends list.', 'buddypress' ); ?></p>
 						</div>
 
 						<?php /* The ID 'friend-list' is important for AJAX support. */ ?>
-						<ul id="friend-list" class="item-list" role="main">
+						<ul id="friend-list" class="directory-list">
 
 						<?php if ( bp_group_has_invites() ) : ?>
 
@@ -224,11 +224,10 @@
 									<?php bp_group_invite_user_avatar(); ?>
 
 									<h4><?php bp_group_invite_user_link(); ?></h4>
-									<span class="activity"><?php bp_group_invite_user_last_active(); ?></span>
+									<span class="group-activity"><?php bp_group_invite_user_last_active(); ?></span>
 
-									<div class="action">
-										<a class="remove" href="<?php bp_group_invite_user_remove_invite_url(); ?>" id="<?php bp_group_invite_item_id(); ?>"><?php _e( 'Remove Invite', 'buddypress' ); ?></a>
-									</div>
+									<a class="remove" href="<?php bp_group_invite_user_remove_invite_url(); ?>" id="<?php bp_group_invite_item_id(); ?>"><?php _e( 'Remove Invite', 'buddypress' ); ?></a>
+
 								</li>
 
 							<?php endwhile; ?>
@@ -243,7 +242,7 @@
 
 				<?php else : ?>
 
-					<div id="message" class="info">
+					<div id="message" class="message-info">
 						<p><?php _e( 'Once you have built up friend connections you will be able to invite others to your group.', 'buddypress' ); ?></p>
 					</div>
 
@@ -261,7 +260,7 @@
 
 			<?php if ( 'crop-image' != bp_get_avatar_admin_step() ) : ?>
 
-				<div class="submit" id="previous-next">
+				<div id="previous-steps">
 
 					<?php /* Previous Button */ ?>
 					<?php if ( !bp_is_first_group_creation_step() ) : ?>

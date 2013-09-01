@@ -7,7 +7,7 @@
  */
 ?>
 <div id="member-panel">
-	<nav id="member-navigation">
+	<nav id="member-navigation" class="nav-list">
 		<ul>
 			<!-- probably want to see about using new nav menu here -->
 			<?php bp_get_displayed_user_nav(); ?>
