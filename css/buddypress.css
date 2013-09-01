@@ -48,7 +48,7 @@
 
 }
 #buddypress .search-directory{
-	
+	float: right;
 }
 #buddypress img.wp-smiley {
 	border: none !important;
@@ -56,6 +56,12 @@
 	float: none !important;
 	margin: 0 !important;
 	padding: 0 !important;
+}
+#buddypress .directory-list{
+	margin: 3% 0 0 0;
+}
+#buddypress .directory-list li{
+	padding: 0 0 3% 0;
 }
 /* 02:  Activity
 -------------------------------------------------------------- */
@@ -342,16 +348,17 @@
 
 }
 #buddypress .group-avatar{
-
+	float: left;
 }
 #buddypress .group-content{
-
+	margin: 0 0 0 150px;
 }
 #buddypress .group-title{
 
 }
 #buddypress .group-meta{
-
+	font-size: 90%;
+	opacity: 0.5;
 }
 #buddypress .group-descrtiption{
 
@@ -639,8 +646,9 @@ a.bp-title-button {
 }
 /* 13:  Navigation
 -------------------------------------------------------------- */
-#buddypress nav.nav-list{
-
+#buddypress .nav-list li{
+	float: left;
+	margin: 0 3% 3% 0;
 }
 #buddypress #nav-secondary{
 
@@ -658,7 +666,10 @@ a.bp-title-button {
 /* 13b: Navigation > Pagination
 -------------------------------------------------------------- */
 #buddypress .pagination{
-	padding: 0 0 2% 0;
+	font-size: 90%;
+	line-height: 1;
+	opacity: 0.5;
+	padding: 0 0 3% 0;
 }
 #buddypress .pagination-count{
 	float: left;
