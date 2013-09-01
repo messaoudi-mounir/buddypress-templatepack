@@ -1,0 +1,14 @@
+themes/*
+!themes/shiftms
+plugins/*
+!plugins/shiftms-*
+!plugins/bp-custom.php
+
+# Mac Stuff         #
+#####################
+.DS_*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
